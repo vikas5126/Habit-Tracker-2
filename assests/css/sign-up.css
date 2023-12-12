@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    background: linear-gradient( black 15%, darkblue) ;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Noto Serif Balinese', serif;
+}
+#container{
+    /* border: 2px solid black; */
+    height: 30rem;
+    width: 25rem;
+    background: none;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 19px 38px, rgba(0, 0, 0, 0.5) 0px 15px 12px;
+}
+h1{
+    color: white;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-family: 'Noto Serif Balinese', serif;
+}
+form{
+    display: flex;
+    flex-direction: column;
+}
+input{
+    width: 20rem;
+    height: 2.3rem;
+    border-radius: 5px;
+    margin: auto;
+    border: none;
+    margin-top: 1.5rem;
+    padding-left: 0.5rem;
+}
+#button{
+    width: 17rem;
+    background-color: #300080;
+    color: white;
+    padding-top: 0.2rem;
+    font-size: larger;
+    font-family: 'Noto Serif Balinese', serif;
+}
+#bottom{
+    width: 17rem;
+    background-color: #300080;
+    color: white;
+    padding-top: 0.2rem;
+    font-size: larger;
+    font-family: 'Noto Serif Balinese', serif;
+    background-color: #8d2626;
+    margin: auto;
+    text-align: center;
+    margin-top: 0.5rem;
+    border-radius: 5px;
+}
+#bottom a{
+    text-decoration: none;
+    color: white;
+}
+#nav{
+    display: none;
+}
+#footer{
+    display: none;
+}
+#sign-up img{
+    display: none;
+}

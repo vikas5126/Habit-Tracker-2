@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>
+            <%= title %>
+        </title>
+        <link rel="stylesheet" href="/css/layouts.css">
+        <link rel="stylesheet" href="/css/header.css">
+        <link rel="stylesheet" href="/css/footer.css">
+        <%- style %>
+    </head>
+    <body>
+        <nav id="navbar">
+            <%- include('_header'); %>
+        </nav>
+
+        <main id="layout-main">
+            <%- body %>
+        </main>
+
+        <footer id="footer">
+            <%- include('_footer'); %>
+        </footer>
+
+        <%- script %>
+    </body>
+</html>

@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#nav{
+    display: flex;
+    height: 5rem;
+    background-color: rgb(176 176 246);
+}
+#logo{
+    display: flex;
+    width: 15rem;
+    height: 4rem;
+    margin-top: 0.5rem;
+    filter: drop-shadow(4px 4px 6px black);
+    
+}
+#logo img{
+    width: 5rem;
+    height: 4rem;
+    margin-left: 0.5rem;
+    cursor: pointer;
+}
+#logo p{
+    font-size: 2.5rem;
+    margin-top: 0.5rem;
+    font-family: 'Ephesis', cursive;
+    font-weight: 900;
+}
+#options {
+    display: flex;
+    margin-left: 2rem;
+}
+#nav li{
+    list-style-type: none;
+    margin-left: 3rem;
+    font-size: 1.2rem;
+    margin-top: 1.5rem;
+    cursor: pointer;
+}
+#nav li a{
+    color: black;
+    text-decoration: none;
+    font-family: cursive;
+}
+#buttons{
+    display: flex;
+    width: 15rem;
+    margin-left: 18rem;
+    justify-content: center;
+    align-items: center;
+}
+#buttons li {
+    background-color: #7d0000;
+    margin-left: 1rem;
+    margin-top: 0rem;
+    width: 6rem;
+    height: 2.5rem;
+    text-align: center;
+    padding-top: 0.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+#buttons li a {
+    color: rgb(211, 183, 183);
+}
+#userdetail{
+    margin-left: 25rem;
+    font-weight: 900;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.3rem;
+    text-align: center;
+    margin-top: 1rem;
+}
+#sign-in{
+    display: none;
+}
+#sign-up{
+    display: none;
+}
+#first{
+    width: 38rem;
+    height: 20rem;
+    /* background-color: aqua; */
+    display: flex;
+    /* margin-top: 9rem; */
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    font-size: 2rem;
+}
+#first h1{
+    text-align: center;
+    margin-top: 5rem;
+    font-weight: 900;
+}
+#sub{
+    text-align: center;
+    font-size: 1.2rem;
+    width: 42rem;
+    margin: auto;
+    margin-top: -1rem;
+}
+.detailview{
+    margin-left: 3rem;
+    font-size: 1.2rem;
+    margin-top: 1.5rem;
+    cursor: pointer;
+    border: none;
+    background-color: #b0b0f6;
+    font-family: cursive;
+}

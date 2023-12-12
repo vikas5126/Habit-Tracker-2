@@ -1,0 +1,254 @@
+*{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    /* overflow-y: scroll; */
+}
+.detailview{
+    margin-left: 3rem;
+    font-size: 1.2rem;
+    margin-top: 1.5rem;
+    cursor: pointer;
+    border: none;
+    background-color: #b0b0f6;
+    font-family: cursive;
+}
+#nav{
+    display: flex;
+    height: 5rem;
+    background-color: rgb(176 176 246);
+}
+#logo{
+    display: flex;
+    width: 15rem;
+    height: 4rem;
+    margin-top: 0.5rem;
+    filter: drop-shadow(4px 4px 6px black);
+    
+}
+#logo img{
+    width: 5rem;
+    height: 4rem;
+    margin-left: 0.5rem;
+    cursor: pointer;
+}
+#logo p{
+    font-size: 2.5rem;
+    margin-top: 0.5rem;
+    font-family: 'Ephesis', cursive;
+    font-weight: 900;
+    width: 10rem;
+}
+#options {
+    display: flex;
+    margin-left: 2rem;
+}
+#nav li{
+    list-style-type: none;
+    margin-left: 3rem;
+    font-size: 1.2rem;
+    margin-top: 1.5rem;
+    cursor: pointer;
+}
+#nav li a{
+    color: black;
+    text-decoration: none;
+    font-family: cursive;
+}
+#buttons{
+    display: flex;
+    width: 15rem;
+    margin-left: 18rem;
+    justify-content: center;
+    align-items: center;
+}
+#buttons li {
+    background-color: #7d0000;
+    margin-left: 1rem;
+    margin-top: 0rem;
+    width: 6rem;
+    height: 2.5rem;
+    text-align: center;
+    padding-top: 0.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+#buttons li a {
+    color: rgb(211, 183, 183);
+}
+#userdetail{
+    margin-left: 25rem;
+    font-weight: 900;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.3rem;
+    text-align: center;
+    margin-top: 1rem;
+}
+#sign-in{
+    display: none;
+}
+#sign-up{
+    display: none;
+}
+
+
+
+/* detail page */
+#main{
+    margin: auto;
+    height: auto;
+    width: 70vw;
+    margin-top: 2rem;
+    overflow-y: visible;
+}
+#page{
+    height: 99vh;
+    width: 99vw;
+    margin: auto;
+    background: url(../images/pexels-moe-magners-6669359.jpg);
+    background-repeat: no-repeat;
+    background-size: 99vw 99vh;
+    position: relative;
+    /* overflow-y: scroll; */
+}
+.habitcontainer{
+    display: flex;
+    background-color: whitesmoke;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+.habit{
+    display: flex;
+    flex-direction: column;
+    width: 82%;
+    height: 6.3rem;
+}
+.top{
+    display: flex;
+    justify-content: space-between;
+}
+.report{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 0.5rem;
+}
+.start{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.start h5{
+    font-family: cursive;
+    font-size: 1rem;
+}
+.successdays{
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-family: cursive;
+    margin-right: 2rem;
+}
+.button{
+    width: 1.3rem;
+    height: 1.3rem;
+    border: 2px solid black;
+    border: 100%;
+    border-radius: 50px;
+    background-color: white;
+    margin-top: 0.3rem;
+}
+.habit_name{
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    font-family: cursive;
+}
+.delete{
+    width: 5rem;
+    height: 4rem;
+    margin-top: 1rem;
+    border: none;
+    background-color: red;
+    font-size: large;
+    font-family: cursive;
+    border-radius: 10px;
+    color: white;
+    margin-left: 2rem;
+}
+#addshow{
+    display: flex;
+    /* justify-content: space-around; */
+    justify-content: center;
+    margin-top: 3rem;
+}
+#add{
+    width: 10rem;
+    height: 2.5rem;
+    border: none;
+    background-color: aquamarine;
+    text-transform: capitalize;
+    text-transform: capitalize;
+    font-family: cursive;
+    font-weight: 700;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+}
+#show{
+    text-transform: capitalize;
+    background-color: peachpuff;
+    border: none;
+    width: 8rem;
+    height: 2.5rem;
+}
+#addwindow{
+    top: 5rem;
+    left: 23rem;
+    height: 15rem;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 40%;
+    background-color: antiquewhite;
+    display: none;
+}
+#addwindow input{
+    width: 22rem;
+    height: 2rem;
+    /* margin: auto; */
+    margin-left: 5rem;
+    margin-top: 1rem;
+}
+#save{
+    width: 12rem;
+    height: 2.5rem;
+    color: white;
+    background: black;
+    border: none;
+    margin-left: 10rem;
+    margin-top: 1.3rem;
+}
+#Cancel{
+    width: 12rem;
+    height: 2.5rem;
+    color: white;
+    background: red;
+    border: none;
+    margin-left: 10rem;
+    margin-top: 1.3rem;
+}
+#bottom{
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    height: 2rem;
+    font-size: 1.2rem;
+    margin: auto;
+    background: peachpuff;
+    width: 10rem;
+    margin-top: 1rem;
+    align-items: center;
+    border-radius: 10px;
+}
+#bottom a{
+    text-decoration: none;
+    color: black;
+}

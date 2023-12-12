@@ -1,0 +1,13 @@
+h4{
+    background-color: black;
+    text-align: center;
+    color: white;
+    height: 2rem;
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: cursive;
+}

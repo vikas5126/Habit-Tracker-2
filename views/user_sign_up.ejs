@@ -1,0 +1,18 @@
+<link rel="stylesheet" href="/css/sign-up.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital@1&family=Noto+Serif+Balinese&family=Oswald:wght@600&family=Raleway:ital@1&display=swap" rel="stylesheet">
+<div id="container">
+    <h1>Sign Up</h1>
+
+    <form action="/users/create" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <input type="password" name="confirm_password" placeholder="Confirm Password" required>
+        <input id="button" type="submit" value="Sign Up">
+    </form>
+    <div id="bottom">
+        <a href="http://localhost:8000/users/sign-in">Login</a>
+    </div>
+</div>

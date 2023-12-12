@@ -1,0 +1,73 @@
+<link rel="stylesheet" href="/css/detail.css">
+<div id="page">
+    <% if(locals.user) { %>
+        <div id="main">
+            <%if(habitList.length>0){%>
+                <% for(habit of habitList){ %>
+                    <div class="habitcontainer">
+                        <div class="habit">
+                            <div class="top">
+                                <div class="habit_name">
+                                    <%=habit.habitname%>
+                                </div>
+                                <div class="successdays">
+                                   Success Days : <%=habit.success_Days %>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="report">
+                                <div class="start">
+                                    <h5>May 26</h5>
+                                    <div class="button"></div>
+                                </div>
+                                <div class="start">
+                                    <h5>May 26</h5>
+                                    <div class="button"></div>
+                                </div>
+                                <div class="start">
+                                    <h5>May 26</h5>
+                                    <div class="button"></div>
+                                </div>
+                                <div class="start">
+                                    <h5>May 26</h5>
+                                    <div class="button"></div>
+                                </div>
+                                <div class="start">
+                                    <h5>May 26</h5>
+                                    <div class="button"></div>
+                                </div>
+                                <div class="start">
+                                    <h5>May 26</h5>
+                                    <div class="button"></div>
+                                </div>
+                                <div class="start">
+                                    <h5>May 26</h5>
+                                    <div class="button"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="delete">delete</button>
+                    </div>
+                <%}%>
+            <%}%>
+            
+        </div>
+        <form action="/info/add/<%=user.id%>" method="post" id="addwindow">
+            <input type="text" name="habitname" placeholder="Enter habit name" id="habitval">
+            <input type="text" name="description" placeholder="Enter description" id="habitdescription">
+            <input type="submit" value="Save" id="save"></input>
+            <!-- <a id="Cancel" href="">Cancel</a> -->
+        </form>
+        <div id="addshow">
+            <button id="add">add habit</button>
+            <!-- <button id="show">show description</button> -->
+        </div>
+    <%}%>
+    <% if(!locals.user){ %>
+        <h1 style="text-align: center; margin-top: 10rem;">Add your habit to check your consistency</h1>
+        <div id="bottom">
+            <a href="http://localhost:8000/users/sign-in">Login</a>
+        </div>
+    <% } %>
+</div>
+<script src="/js/detail.js"></script>

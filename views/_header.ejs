@@ -1,0 +1,66 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital@1&family=Ephesis&family=Noto+Serif+Balinese&family=Oswald:wght@600&family=Raleway:ital@1&display=swap" rel="stylesheet">
+<style>
+    #sign-in img{
+        margin-top: 5rem;
+        filter: blur(1px);
+        margin-right: 2rem;
+    }
+    #sign-up img{
+        margin-top: 5rem;
+        /* filter: blur(1px); */
+        margin-right: 2rem;
+    }
+</style>
+<div id="sign-in">
+    <img src="/images/1.png" alt="">
+</div>
+<div id="sign-up">
+    <img src="/images/2.png" alt="">
+</div>
+<nav id="nav">
+    <div id="logo">
+        <img src="/images/3.png" alt="">
+        <p>Paper Roll</p>
+    </div>
+    <div id="options">
+        <% if(locals.user) {%>
+            <form action="/info/<%=user.id%>" method="post" id="detailfrom">
+                <button type="submit" class="detailview">Detail View</button>
+            </form>
+        <% } %>
+        <% if(!locals.user) { %>
+            <!-- <form action="/info/" method="post" id="detailfrom1">
+                <button type="submit" class="detailview">Detail View</button>
+            </form> -->
+            <li>
+                <a href="http://localhost:8000/info">Detailviews</a>
+            </li>
+        <% } %>
+        <li>
+            <a href="">About project</a>
+        </li>
+
+        <li>
+            <a href="">Creator</a>
+        </li>
+    </div>
+    <% if(!locals.user) {%>
+        <div id="buttons">
+            <li>
+                <a href="http://localhost:8000/users/sign-in">Login</a>
+            </li>
+            <li style="background-color: blue;">
+                <a href="http://localhost:8000/users/sign-up">Sign Up</a>
+            </li>
+        </div>
+    <% }%>
+    <% if(locals.user){ %>
+        <div id="userdetail">
+            <p> <%= user.name %> </p>
+            <p>hello dear</p>
+        </div>
+    <% } %>
+    
+</nav>
