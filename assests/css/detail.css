@@ -94,22 +94,26 @@
 
 
 /* detail page */
+#layout-main{
+    ::-webkit-scrollbar{
+        display: none;
+    }
+}
 #main{
     margin: auto;
     height: auto;
     width: 70vw;
     margin-top: 2rem;
-    overflow-y: visible;
 }
 #page{
-    height: 99vh;
+    height: 87vh;
     width: 99vw;
     margin: auto;
     background: url(../images/pexels-moe-magners-6669359.jpg);
     background-repeat: no-repeat;
     background-size: 99vw 99vh;
     position: relative;
-    /* overflow-y: scroll; */
+    overflow-y: scroll;
 }
 .habitcontainer{
     display: flex;
@@ -149,13 +153,17 @@
     margin-right: 2rem;
 }
 .button{
+    background-color: beige;
     width: 1.3rem;
     height: 1.3rem;
-    border: 2px solid black;
+    border: 0.5px solid black;
     border: 100%;
     border-radius: 50px;
-    background-color: white;
     margin-top: 0.3rem;
+    display: flex;
+    justify-content: center;
+    background-color: darkgrey;
+    align-items: center;
 }
 .habit_name{
     font-size: 1.5rem;
@@ -174,12 +182,18 @@
     color: white;
     margin-left: 2rem;
 }
+.delete a{
+    text-decoration: none;
+    color: white;
+}
 #addshow{
     display: flex;
     /* justify-content: space-around; */
     justify-content: center;
-    margin-top: 3rem;
+    margin-bottom: 3rem;
+    margin-top: 2rem;
 }
+
 #add{
     width: 10rem;
     height: 2.5rem;
@@ -200,12 +214,12 @@
     height: 2.5rem;
 }
 #addwindow{
-    top: 5rem;
+    top: 14rem;
     left: 23rem;
     height: 15rem;
     display: flex;
     flex-direction: column;
-    position: absolute;
+    position: fixed;
     width: 40%;
     background-color: antiquewhite;
     display: none;

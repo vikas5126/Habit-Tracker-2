@@ -12,11 +12,7 @@ const habitSchema = new mongoose.Schema({
         required: true
     },
     start: {
-        type: Date,
-        required: true,
-    },
-    end: {
-        type: Date,
+        type: Array,
         required: true,
     },
     current_streak: {

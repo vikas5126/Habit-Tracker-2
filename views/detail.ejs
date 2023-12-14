@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="/css/detail.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 <div id="page">
     <% if(locals.user) { %>
         <div id="main">
@@ -16,43 +17,27 @@
                             </div>
                             <hr>
                             <div class="report">
-                                <div class="start">
-                                    <h5>May 26</h5>
-                                    <div class="button"></div>
-                                </div>
-                                <div class="start">
-                                    <h5>May 26</h5>
-                                    <div class="button"></div>
-                                </div>
-                                <div class="start">
-                                    <h5>May 26</h5>
-                                    <div class="button"></div>
-                                </div>
-                                <div class="start">
-                                    <h5>May 26</h5>
-                                    <div class="button"></div>
-                                </div>
-                                <div class="start">
-                                    <h5>May 26</h5>
-                                    <div class="button"></div>
-                                </div>
-                                <div class="start">
-                                    <h5>May 26</h5>
-                                    <div class="button"></div>
-                                </div>
-                                <div class="start">
-                                    <h5>May 26</h5>
-                                    <div class="button"></div>
-                                </div>
+                                <% for(dates of habit.start){ %>
+                                    <div class="start">
+                                        <h5><%=dates.date%></h5>
+                                        <% if(dates.action == "none") {%>
+                                            <div class="button">
+                                                <i class="fa-solid fa-minus" style="color: #1e00ff;"></i>
+                                            </div>
+                                        <% } %>
+                                    </div>
+                                <% } %>
                             </div>
                         </div>
-                        <button class="delete">delete</button>
+                        <button class="delete">
+                            <a href="/info/<%=user.id%>/delete/<%=habit.id%>">delete</a>
+                        </button>
                     </div>
                 <%}%>
             <%}%>
             
         </div>
-        <form action="/info/add/<%=user.id%>" method="post" id="addwindow">
+        <form action="/info/<%=user.id%>/add" method="post" id="addwindow">
             <input type="text" name="habitname" placeholder="Enter habit name" id="habitval">
             <input type="text" name="description" placeholder="Enter description" id="habitdescription">
             <input type="submit" value="Save" id="save"></input>
@@ -70,4 +55,5 @@
         </div>
     <% } %>
 </div>
+<script src="https://kit.fontawesome.com/a2466d3c1a.js" crossorigin="anonymous"></script>
 <script src="/js/detail.js"></script>

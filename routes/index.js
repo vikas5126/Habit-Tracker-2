@@ -8,6 +8,6 @@ const detailviewControllers = require('../controllers/detailview_Controller')
 router.get('/', homeController.home);
 router.use('/users', require('./user'));
 router.use('/info', require('./info'))
-router.get('/info/add/:id', detailviewControllers.add);
+
 
 module.exports = router;
