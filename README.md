@@ -42,41 +42,6 @@ Here is the Technology Stack of this Application. which I have used to Built thi
 -  Start by installing npm and mongoDB if you don't have them already.
 -  Run the Mongo Server.
 
-
-
-## Directory Structure and flow of The Code
-
-This code follows MVC pattern and hence everything is differentiated and well managed:
-
-    Habit_tracker
-        |-----assets
-        |       |--- css
-        |       |     |-- habit.css
-        |       |     |-- home.css
-        |       |     └-- layout.css
-        |       |--- sass
-        |             |-- habit.scss
-        |             |-- home.scss
-        |             └-- layout.scss
-        |------ config
-        |         └--- mongoose.js
-        |------ controllers
-        |         └--- habitController.js
-        |------ models
-        |         └--- habit.js
-        |         └--- user.js
-        |------ routes
-        |         └--- index.js
-        |------ views
-        |         |--- habit.ejs
-        |         |--- home.ejs
-        |         └--- layout.ejs
-        |------ .gitignore
-        |------ index.js
-        |------ package.json
-        |------ package-lock.json
-        └------ README.md
-
 <!-- CONTRIBUTING -->
 
 ## Contributing
