@@ -42,6 +42,60 @@ Here is the Technology Stack of this Application. which I have used to Built thi
 -  Start by installing npm and mongoDB if you don't have them already.
 -  Run the Mongo Server.
 
+
+
+## Directory Structure and flow of The Code
+
+This code follows MVC pattern and hence everything is differentiated and well managed:
+
+    Habit_tracker
+        |-----assets
+        |       |--- css
+        |       |      |-- detail.css
+        |       |      |-- home.css
+        |       |      |-- footer.css
+        |       |      |-- sign-in.css
+        |       |      |-- sign-up.css
+        |       |
+        |       |----  js
+        |       |      |--detail.js
+        |       |
+        |       | ---- image
+        |       
+        |------ config
+        |         └--- mongoose.js
+        |         |---- passport.js
+        |
+        |
+        |------ controllers
+        |         └--- detailview_Controller.js
+        |         |--- home_controller.js
+        |         |--- user_controller.js
+        |
+        |
+        |------ models
+        |         └--- habit.js
+        |         └--- users.js
+        |------ routes
+        |         └--- index.js
+        |         |--- info.js
+        |         |--- user.js
+        |         
+        |------ views
+        |         |--- _footer.ejs
+        |         |--- home.ejs
+        |         └--- layout.ejs
+        |         |---_header.ejs
+        |         |--- user_profile.ejs
+        |         |--- user_sign_in.ejs
+        |         |--- user_sign_up.ejs
+        |
+        |
+        |------ index.js
+        |------ package.json
+        |------ package-lock.json
+        └------ README.md
+
 <!-- CONTRIBUTING -->
 
 ## Contributing
