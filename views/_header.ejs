@@ -25,6 +25,9 @@
         <p>Paper Roll</p>
     </div>
     <div id="options">
+        <li>
+            <a href="http://localhost:8000">Home</a>
+        </li>
         <% if(locals.user) {%>
             <form action="/info/<%=user.id%>" method="post" id="detailfrom">
                 <button type="submit" class="detailview">Detail View</button>
@@ -41,13 +44,6 @@
                 <a href="http://localhost:8000/info">Detailviews</a>
             </li>
         <% } %>
-        <li>
-            <a href="">About project</a>
-        </li>
-
-        <li>
-            <a href="">Creator</a>
-        </li>
     </div>
     <% if(!locals.user) {%>
         <div id="buttons">
@@ -64,6 +60,16 @@
             <p> <%= user.name %> </p>
             <p>hello dear</p>
         </div>
+        <div class="Logout">
+            <li style="
+            margin-left: 0rem;
+            margin-top: 0rem;
+        ">
+                <a href="http://localhost:8000/users/sign-out">Logout</a>
+            </li>
+        </div>
     <% } %>
     
 </nav>
+
+

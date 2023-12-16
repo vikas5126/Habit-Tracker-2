@@ -5,6 +5,7 @@ let date = new Date()
 let time = date.getMonth() + ' ' + date.getDate();
 let end = date.getMonth() + ' ' + date.getDate()+7;
 let userid ;
+
 module.exports.home = function(req, res){
     User.findById({_id: req.params.id}).populate('habits').then((user)=>{
         if(!user){
@@ -95,74 +96,46 @@ module.exports.add = async function(req, res){
 
 module.exports.takeAction = async function(req, res){
     // finding the habit by ID
+    // console.log(req.body.dayBefore);
+    let date = req.body.dayBefore;
     const habit = await Habit.findById(req.params.id);
- 
-    let date = moment()
-       .subtract(req.body.dayBefore, "days")
-       .format("DD/MM/YYYY");
- 
-    //temprary store the habit completions MAP
-    const completionsMap = habit.completions;
- 
-    // toggling the staus here
-    switch (completionsMap.get(date)) {
-       case "Done":
-          completionsMap.set(date, "Not-Done");
-          break;
-       case "Not-Done":
-          completionsMap.set(date, "None");
-          break;
-       case "None":
-          completionsMap.set(date, "Done");
-          break;
+    
+
+    let arr = habit.start;
+    for(let i=0; i<7; i++){
+        if(arr[i].date == date){
+            if(arr[i].action == "none"){
+                arr[i].action = "done";
+            }
+            else if(arr[i].action == "done"){
+                arr[i].action = "not-done";
+            }
+            else{
+                arr[i].action = "none";
+            }
+        }
+        
     }
  
     // calculate the records
-    let bestScore = 0,
-       currentScore = 0,
-       success = 0,
-       totalDays = 0;
- 
-    // logic for getting records
-    for (d of completionsMap) {
-       totalDays++;
-       if (d[0] == moment().format("DD/MM/YYYY").toString()) {
-          if (d[1] == "Done") {
-             if (++currentScore > bestScore) {
-                bestScore = currentScore;
-             }
-             success++;
-          }
-          if (d[1] == "Not-Done") {
-             currentScore = 0;
-          }
-          break;
-       } else {
-          if (d[1] == "Done") {
-             if (++currentScore > bestScore) {
-                bestScore = currentScore;
-             }
-             success++;
-          } else {
-             currentScore = 0;
-          }
-       }
+    let success = 0;
+    for(let i=0; i<7; i++){
+        if(arr[i].action == 'done'){
+            success++;
+        }
     }
- 
+
     await Habit.updateOne(
        { _id: req.params.id },
        {
           $set: {
-             current_Streak: currentScore,
-             best_Streak: bestScore,
-             success_Days: success,
-             totalDaysTillDate: totalDays,
-             completions: completionsMap,
+            start : arr,
+            success_Days: success,
           },
        }
     );
  
-    return res.redirect("back");
+    return res.redirect("/");
  };
  
 

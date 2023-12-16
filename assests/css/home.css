@@ -46,7 +46,7 @@
 #buttons{
     display: flex;
     width: 15rem;
-    margin-left: 18rem;
+    margin-left: 28rem;
     justify-content: center;
     align-items: center;
 }
@@ -109,4 +109,20 @@
     border: none;
     background-color: #b0b0f6;
     font-family: cursive;
+}
+.logout{
+    margin-left: 5rem;
+    height: 3rem;
+    width: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    border-radius: 10px;
+    margin-top: 1rem;
+}
+#userdetail{
+    text-transform: capitalize;
+    font-family: cursive;
+    font-weight: 500;
 }

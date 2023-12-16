@@ -21,9 +21,28 @@
                                     <div class="start">
                                         <h5><%=dates.date%></h5>
                                         <% if(dates.action == "none") {%>
-                                            <div class="button">
-                                                <i class="fa-solid fa-minus" style="color: #1e00ff;"></i>
-                                            </div>
+                                            <form action="/info/<%=user.id%>/active/<%=habit._id%>" method="post" id="formActivity">
+                                                <input type="hidden" name="dayBefore" value="<%=dates.date%>">
+                                                <button class="button">
+                                                    <i class="fa-solid fa-minus" style="color: #1e00ff;"></i>
+                                                </button>
+                                            </form>
+                                        <% } %>
+                                        <% if(dates.action == "done") {%>
+                                            <form action="/info/<%=user.id%>/active/<%=habit._id%>" method="post" id="formActivity">
+                                                <input type="hidden" name="dayBefore" value="<%=dates.date%>">
+                                                <button class="button">
+                                                    <i class="fa-solid fa-check" style="color: #10d513;"></i>
+                                                </button>
+                                            </form>
+                                        <% } %>
+                                        <% if(dates.action == "not-done") {%>
+                                            <form action="/info/<%=user.id%>/active/<%=habit._id%>" method="post" id="formActivity">
+                                                <input type="hidden" name="dayBefore" value="<%=dates.date%>">
+                                                <button class="button">
+                                                    <i class="fa-solid fa-xmark" style="color: #ff0000;"></i>
+                                                </button>
+                                            </form>
                                         <% } %>
                                     </div>
                                 <% } %>
@@ -39,9 +58,8 @@
         </div>
         <form action="/info/<%=user.id%>/add" method="post" id="addwindow">
             <input type="text" name="habitname" placeholder="Enter habit name" id="habitval">
-            <input type="text" name="description" placeholder="Enter description" id="habitdescription">
             <input type="submit" value="Save" id="save"></input>
-            <!-- <a id="Cancel" href="">Cancel</a> -->
+            <a id="Cancel" href="http://localhost:8000/info">Cancel</a>
         </form>
         <div id="addshow">
             <button id="add">add habit</button>

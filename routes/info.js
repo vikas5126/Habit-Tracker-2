@@ -9,6 +9,7 @@ router.post("/:id", detailviewControllers.home);
 router.get("/", detailviewControllers.home2);
 router.post('/:id/add', detailviewControllers.add);
 router.get("/:id/delete/:id", detailviewControllers.deletehabit);
+router.post("/:id/active/:id", detailviewControllers.takeAction);
 // router.get('/view/:id', detailviewControllers.showHabit);
 
 module.exports = router;

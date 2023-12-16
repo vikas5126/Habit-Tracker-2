@@ -58,7 +58,7 @@
 #buttons{
     display: flex;
     width: 15rem;
-    margin-left: 18rem;
+    margin-left: 28rem;
     justify-content: center;
     align-items: center;
 }
@@ -90,9 +90,22 @@
 #sign-up{
     display: none;
 }
-
-
-
+.logout{
+    margin-left: 5rem;
+    height: 3rem;
+    width: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    border-radius: 10px;
+    margin-top: 1rem;
+}
+#userdetail{
+    text-transform: capitalize;
+    font-family: cursive;
+    font-weight: 500;
+}
 /* detail page */
 #layout-main{
     ::-webkit-scrollbar{
@@ -162,7 +175,7 @@
     margin-top: 0.3rem;
     display: flex;
     justify-content: center;
-    background-color: darkgrey;
+    background-color: white;
     align-items: center;
 }
 .habit_name{
