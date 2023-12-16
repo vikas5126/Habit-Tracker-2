@@ -48,7 +48,7 @@ module.exports.add = async function(req, res){
     try{
         let habit = await Habit.create({
             habitname: req.body.habitname,
-            description: req.body.description,
+            // description: req.body.description,
             user: req.user._id,
             start: arr,
             current_streak: 0,
